@@ -9,7 +9,8 @@ import Foundation
 
 
 extension Bundle {
-    func decoder(_ file: String) -> [String: Astronaut] {
+    func decoder<T: Codable>(_ file: String) -> T {
+        
         guard let url = url(forResource: file, withExtension: nil) else {
             fatalError("Couldn't locate \(file)")
         }
@@ -18,8 +19,13 @@ extension Bundle {
         }
         
         let decoder = JSONDecoder()
+        let formatter = DateFormatter()
         
-        guard let loaded = try? decoder.decode([String: Astronaut].self, from: data) else {
+        // Any date that goes anywhere will be formatted like this:
+        formatter.dateFormat = "y-MM-dd"
+        decoder.dateDecodingStrategy = .formatted(formatter)
+        
+        guard let loaded = try? decoder.decode(T.self, from: data) else {
             fatalError("Failed to decode from \(file)")
         }
         return loaded
