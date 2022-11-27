@@ -23,6 +23,7 @@ struct AstronautDetailView: View {
                     .padding()
             }
         }
+        .background(.darkBackground)
         .navigationTitle(astronaut.name)
         .navigationBarTitleDisplayMode(.inline)
         .preferredColorScheme(.dark)
