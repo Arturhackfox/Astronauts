@@ -46,6 +46,7 @@ struct listView: View {
                     RoundedRectangle(cornerRadius: 12)
                         .stroke(.lightBackground)
                 }
+                .frame(width: 330)
                 
             }}
             .listRowBackground(darkBackgroundView())
