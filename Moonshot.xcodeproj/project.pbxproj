@@ -27,6 +27,7 @@
 		3266B57C293377E3007CE98F /* rectangleDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3266B57B293377E3007CE98F /* rectangleDivider.swift */; };
 		3266B57E29337937007CE98F /* listView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3266B57D29337937007CE98F /* listView.swift */; };
 		3266B58229338A57007CE98F /* gridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3266B58129338A57007CE98F /* gridView.swift */; };
+		3266B58A29338E20007CE98F /* darkBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3266B58929338E20007CE98F /* darkBackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		3266B57B293377E3007CE98F /* rectangleDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rectangleDivider.swift; sourceTree = "<group>"; };
 		3266B57D29337937007CE98F /* listView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listView.swift; sourceTree = "<group>"; };
 		3266B58129338A57007CE98F /* gridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gridView.swift; sourceTree = "<group>"; };
+		3266B58929338E20007CE98F /* darkBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = darkBackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,9 +184,9 @@
 		3266B58629338CAF007CE98F /* data */ = {
 			isa = PBXGroup;
 			children = (
-				324F895D2930D640007E24DD /* color themes.swift */,
 				324F88A1292FAAE3007E24DD /* missions.json */,
 				324F88A2292FAAE3007E24DD /* astronauts.json */,
+				3266B58B29338E41007CE98F /* Colors */,
 				3266B58729338CC2007CE98F /* Decode method */,
 			);
 			path = data;
@@ -196,6 +198,15 @@
 				324F8957292FB030007E24DD /* data - decoded.swift */,
 			);
 			path = "Decode method";
+			sourceTree = "<group>";
+		};
+		3266B58B29338E41007CE98F /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				324F895D2930D640007E24DD /* color themes.swift */,
+				3266B58929338E20007CE98F /* darkBackgroundView.swift */,
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,6 +351,7 @@
 				324F8956292FAFED007E24DD /* Astronaut.swift in Sources */,
 				324F887A292F8BBE007E24DD /* ContentView.swift in Sources */,
 				324F895C292FB8AE007E24DD /* missions.swift in Sources */,
+				3266B58A29338E20007CE98F /* darkBackgroundView.swift in Sources */,
 				324F8958292FB030007E24DD /* data - decoded.swift in Sources */,
 				324F89602930ED25007E24DD /* Missionview.swift in Sources */,
 				324F8878292F8BBE007E24DD /* MoonshotApp.swift in Sources */,

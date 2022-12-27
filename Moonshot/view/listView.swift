@@ -21,11 +21,13 @@ struct listView: View {
             NavigationLink{
                 Missionview(mission: mission, astronauts: astronauts)
             } label: {
-                VStack{
+                HStack{
                     Image(mission.image)
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 100, height: 100)
+                        .frame(width: 100, height: 50)
+                        .padding(.trailing, 30)
+                        .padding(.leading, 10)
                     VStack{
                         Text(mission.displayName)
                             .foregroundColor(.white)
@@ -34,8 +36,8 @@ struct listView: View {
                             .foregroundColor(.white.opacity(0.5))
                     }
                     .padding()
+                    .frame(height: 50)
                     .frame(maxWidth: .infinity)
-                    .background(.lightBackground)
                     
                 }
                 .background(.darkBackground)
@@ -47,12 +49,13 @@ struct listView: View {
                 
             }}
             .listRowBackground(darkBackgroundView())
+            .frame(maxWidth: .infinity)
+
 
         }
         .scrollContentBackground(.hidden)
         .listRowBackground(Color.red)
         .background(.darkBackground)
-        .padding([.vertical,.horizontal])
         
         
     }

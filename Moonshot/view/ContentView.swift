@@ -20,9 +20,13 @@ struct ContentView: View {
                 Color.darkBackground
                 if showingList{
                    listView(astronauts: astronauts)
+                        .accessibilityRemoveTraits(.isImage)
+                        .accessibilityAddTraits(.isButton)
 
                 } else {
                     gridView(astronauts: astronauts)
+                        .accessibilityRemoveTraits(.isImage)
+                        .accessibilityAddTraits(.isButton)
                 }
             }
             .navigationTitle("Moonshot")
